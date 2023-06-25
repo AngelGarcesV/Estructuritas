@@ -10,6 +10,19 @@ Vertex<T>::Vertex(const T& value) {
     predecessor = 0;
     distance = 0;
     color = 'w';
+    principal=false;
+}
+template<class T>
+Vertex<T>::Vertex(const T& value,char sedee) {
+    data = value;
+    inDegree = 0;
+    outDegree = 0;
+    connectedTo = {};
+    predecessor = 0;
+    distance = 0;
+    color = 'w';
+    sede=sedee;
+    principal=false;
 }
 template<class T>
 Vertex<T>::~Vertex() {
@@ -37,13 +50,35 @@ template<class T>
 Graph<T>::Graph() {
     count = 0;
     vertexList = {};
+    boquemonte=false;
+    antonio= false;
+    barcelona= false;
 }
 template<class T>
 Graph<T>::~Graph() {
 }
 template<class T>
+Vertex<T>* Graph<T>::addVertex(const T &value,char sede) {
+    Vertex<T>* newVertex = new Vertex<T>(value,sede);
+    vertexList.push_back(newVertex);
+    count++;
+    if (newVertex->sede=='A'&& antonio== false){
+        newVertex->principal=true;
+        antonio=true;
+    }
+    if (newVertex->sede=='B'&& barcelona== false){
+        newVertex->principal=true;
+        barcelona=true;
+    }
+    if (newVertex->sede=='C'&& boquemonte== false){
+        newVertex->principal=true;
+        boquemonte=true;
+    }
+    return newVertex;
+}
+template<class T>
 Vertex<T>* Graph<T>::addVertex(const T &value) {
-    Vertex<T>* newVertex = new Vertex<T>(value);
+    Vertex<T>* newVertex = new Vertex<T>(value,'0');
     vertexList.push_back(newVertex);
     count++;
     return newVertex;

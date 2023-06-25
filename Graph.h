@@ -28,6 +28,9 @@ public:
     Vertex<T>* predecessor;
     int distance;
     char color;
+    char sede;
+    bool principal;
+    Vertex(const T& value,char sedee);
     Vertex(const T& value);
     ~Vertex();
     void addNeighbor(Vertex<T>* to, int weight=0);
@@ -46,12 +49,16 @@ template<class T>
 class Graph {
 public:
     int count;
+    bool barcelona;
+    bool boquemonte;
+    bool antonio;
     vector<Vertex<T>*> vertexList;
     Graph();
     ~Graph();
     void deleteVertex(int position);
+    Vertex<T>* addVertex(const T& value,char sede);
     Vertex<T>* addVertex(const T& value);
     Vertex<T>* getVertex(const T& value);
     void addEdge(const T& from, const T& to, int weight=0);
 };
-#endif
+#endif //GRAFOESCALERAPALABRAS_GRAPH_H

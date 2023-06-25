@@ -1,0 +1,30 @@
+/snap/clion/237/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/snap/clion/237/bin/ninja/linux/x64/ninja -G Ninja -S "/home/angel/Downloads/grafo y pesos completo" -B "/home/angel/Downloads/grafo y pesos completo/cmake-build-debug"
+-- The C compiler identification is GNU 12.2.0
+-- The CXX compiler identification is GNU 12.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Error at /usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfig.cmake:139 (message):
+  Requested SFML configuration (Static) was not found
+Call Stack (most recent call first):
+  CMakeLists.txt:8 (find_package)
+
+
+CMake Error at CMakeLists.txt:8 (find_package):
+  Found package configuration file:
+
+    /usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfig.cmake
+
+  but it set SFML_FOUND to FALSE so package "SFML" is considered to be NOT
+  FOUND.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/angel/Downloads/grafo y pesos completo/cmake-build-debug/CMakeFiles/CMakeOutput.log".
